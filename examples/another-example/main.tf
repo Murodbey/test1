@@ -43,6 +43,7 @@ module "eks" {
 module "busybox_helm_release" {
   source = "../../"
 
+  description = "test"
   create_helm_release = true
   release_name        = local.release_name
   chart               = "oci://registry-1.docker.io/bitnamicharts/busybox" # Using a public busybox chart as an example
